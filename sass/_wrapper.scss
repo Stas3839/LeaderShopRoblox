@@ -1,0 +1,33 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  gap: 20px;
+  font-size: 32px;
+  font-family: "Lexend", sans-serif;
+}
+
+#display {
+  background: #000;
+  width: 178px;
+  height: 100px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 56px;
+  font-weight: 700;
+  border-radius: 10px;
+}
+#numberA, #numberB {
+  width: 250px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding-left: 25px;
+  font-size: 32px;
+  font-family: "Lexend", sans-serif;
+  font-weight: 700;
+}

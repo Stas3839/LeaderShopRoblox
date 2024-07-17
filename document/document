@@ -1,0 +1,274 @@
+<div class="wrapper">
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <a href="" class="logo__link">Product Edition</a>
+      </div>
+      <div class="basket">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span id="totalProductCount">0</span>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <section class="banner">
+      <aside class="sidebar">
+        <div class="inputRange">
+          <input
+            type="range"
+            id="inputRange"
+            min="0"
+            max="1223"
+            value="1223"
+          />
+          <span id="display">0</span>
+        </div>
+        <input type="number" id="inputNumber" placeholder="Макс. цена" />
+        <div class="inputSearch">
+          <input type="text" id="inputSearch" placeholder="Поиск товара" />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="checkbox">
+          <div class="Keomav">
+            <input type="checkbox" id="checkboxKeomav" value="Keomav" />
+            <label for="checkboxKeomav" id="label">Keomav</label>
+          </div>
+          <div class="Jaymes">
+            <input type="checkbox" id="checkboxJaymes" value="Jaymes" />
+            <label for="checkboxJaymes" id="label">Jaymes</label>
+          </div>
+          <div class="Yosef">
+            <input type="checkbox" id="checkboxYosef" value="Yosef" />
+            <label for="checkboxYosef" id="label">Yosef</label>
+          </div>
+          <div class="Mister">
+            <input type="checkbox" id="checkboxMister" value="Mister" />
+            <label for="checkboxMister" id="label">Mister</label>
+          </div>
+        </div>
+        <select id="sortSelect">
+          <option value="ExpensiveCard">Самый дорогой</option>
+          <option value="CheapCard">Самый дешевый</option>
+          <option value="popularHigh">Высокая популярность</option>
+          <option value="popularLow">Низкая популярность</option>
+          <option value="AlphabeticCard">По алфавиту</option>
+        </select>
+      </aside>
+      <div class="cardsContainer">
+        <div
+          class="cardInfo"
+          data-title="Andrew"
+          data-price="515"
+          data-image="img/2013.jpg"
+        >
+          <div class="image">
+            <img src="img/2013.jpg" alt="Andrew" />
+          </div>
+          <div class="info">
+            <div class="name">
+              <h1>Andrew</h1>
+            </div>
+            <div class="brand">
+              <h1>Keomav</h1>
+            </div>
+            <div class="popularity">
+              <span>5.5</span>
+            </div>
+            <div class="price">
+              <span>$515</span>
+            </div>
+            <div class="btn">
+              <button id="basket">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="cardInfo" data-title="Keomav" data-price="479" data-image="img/3675.jpg">
+          <div class="image">
+            <img src="img/3675.jpg" alt="" />
+          </div>
+          <div class="info">
+            <div class="name">
+              <h1>Keomav</h1>
+            </div>
+            <div class="brand">
+              <h1>Keomav</h1>
+            </div>
+            <div class="popularity">
+              <span>7.8</span>
+            </div>
+            <div class="price">
+              <span>$479</span>
+            </div>
+            <div class="btn">
+              <button id="basket">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="cardInfo" data-title="HuhMack" data-price="818" data-image="img/3824.jpg">
+          <div class="image">
+            <img src="img/3824.jpg" alt="" />
+          </div>
+          <div class="info">
+            <div class="name">
+              <h1>HuhMack</h1>
+            </div>
+            <div class="brand">
+              <h1>Yosef</h1>
+            </div>
+            <div class="popularity">
+              <span>7.2</span>
+            </div>
+            <div class="price">
+              <span>$818</span>
+            </div>
+            <div class="btn">
+              <button id="basket">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="cardInfo" data-title="dokiiys" data-price="396" data-image="img/3973.jpg">
+          <div class="image">
+            <img src="img/3973.jpg" alt="" />
+          </div>
+          <div class="info">
+            <div class="name">
+              <h1>dokiiys</h1>
+            </div>
+            <div class="brand">
+              <h1>Jaymes</h1>
+            </div>
+            <div class="popularity">
+              <span>7.4</span>
+            </div>
+            <div class="price">
+              <span>$396</span>
+            </div>
+            <div class="btn">
+              <button id="basket">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="cardInfo" data-title="Jaymes" data-price="224" data-image="img/4842.jpg">
+          <div class="image">
+            <img src="img/4842.jpg" alt="" />
+          </div>
+          <div class="info">
+            <div class="name">
+              <h1>Jaymes</h1>
+            </div>
+            <div class="brand">
+              <h1>Jaymes</h1>
+            </div>
+            <div class="popularity">
+              <span>7.7</span>
+            </div>
+            <div class="price">
+              <span>$224</span>
+            </div>
+            <div class="btn">
+              <button id="basket">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="cardInfo" data-title="Yosef" data-price="773" data-image="img/5299.jpg">
+          <div class="image">
+            <img src="img/5299.jpg" alt="" />
+          </div>
+          <div class="info">
+            <div class="name">
+              <h1>Yosef</h1>
+            </div>
+            <div class="brand">
+              <h1>Yosef</h1>
+            </div>
+            <div class="popularity">
+              <span>6.6</span>
+            </div>
+            <div class="price">
+              <span>$773</span>
+            </div>
+            <div class="btn">
+              <button id="basket">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="cardInfo" data-title="Minecraft" data-price="1223" data-image="img/899.jpg">
+          <div class="image">
+            <img src="img/899.jpg" alt="" />
+          </div>
+          <div class="info">
+            <div class="name">
+              <h1>Minecraft</h1>
+            </div>
+            <div class="brand">
+              <h1>Mister</h1>
+            </div>
+            <div class="popularity">
+              <span>9.9</span>
+            </div>
+            <div class="price">
+              <span>$1223</span>
+            </div>
+            <div class="btn">
+              <button id="basket">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="cardInfo" data-title="Gunnar" data-price="1000" data-image="img/4312.jpg">
+          <div class="image">
+            <img src="img/4312.jpg" alt="" />
+          </div>
+          <div class="info">
+            <div class="name">
+              <h1>Gunnar</h1>
+            </div>
+            <div class="brand">
+              <h1>Mister</h1>
+            </div>
+            <div class="popularity">
+              <span>8.5</span>
+            </div>
+            <div class="price">
+              <span>$1000</span>
+            </div>
+          </div>
+          <div class="btn">
+            <button id="basket">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <aside class="basketBar">
+        <div class="heading">
+          <h1>Basket</h1>
+        </div>
+        <div class="head">
+          <h1>Product</h1>
+        </div>
+        <div class="totalPriceProductDisplay">
+          Price: $<span id="totalPriceProductDisplay">0</span>
+        </div>
+      </aside>
+    </section>
+  </main>
+</div>
+   <div class="similarProductsContainer">
+    <h2>Similar Products</h2>
+    <div class="similarProducts"></div>
+  </div> 
+</div>

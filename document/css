@@ -1,0 +1,226 @@
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 20px;
+}
+.similarProducts {
+  display: flex;
+  gap: 20px;
+}
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  background: #555;
+  padding: 20px;
+}
+
+.cardsContainer {
+  width: 1500px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 900px;
+  gap: 20px;
+}
+.checkbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Keomav, .Jaymes, .Yosef, .Mister {
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 14px;
+  justify-content: center;
+  gap: 50px;
+
+}
+.cardInfo {
+  background: #333;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 0.3s;
+  
+} 
+.cardInfo:hover {
+  box-shadow: 9px 9px 9px 9px #333;
+}
+.brand {
+  font-size: 8px;
+  color: white;
+}
+.name {
+  color: white;
+}
+.price {
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
+}
+.popularity {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+}
+.inputRange {
+  display: flex;
+  flex-direction: column-reverse;
+} 
+.fa-magnifying-glass {
+  position: absolute;
+  left: 60px; /* Расположение иконки справа */
+  top: 30%;
+  transform: translateX(-53px);
+  cursor: pointer;
+  font-size: 20px;
+  color: grey;
+}
+.inputSearch {
+  position: relative;
+  display: inline-block;
+}
+
+
+
+
+#display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  background: #777;
+  color: white ;
+  border-radius: 5px;   
+}
+#label {
+  color: white;
+}
+#inputNumber ,#inputSearch {
+  width: 180px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  padding-left: 40px;
+  font-size: 18px;
+  font-family: 'Lexend' ,sans-serif;
+}
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 18px 0;
+  background: transparent;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: linear-gradient(145deg, #6b8cce, #4a69bb);
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: linear-gradient(145deg, #6b8cce, #4a69bb);
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 25px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(90deg, #e3f2fd, #bbdefb);
+  border-radius: 5px;
+  border: none;
+}
+
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(90deg, #e3f2fd, #bbdefb);
+  border-radius: 5px;
+  border: none;
+}
+
+input[type="range"]::-ms-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type="range"]::-ms-fill-lower {
+  background: #bbdefb;
+  border-radius: 5px;
+}
+
+input[type="range"]::-ms-fill-upper {
+  background: #e3f2fd;
+  border-radius: 5px;
+}
+.checkbox {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox div {
+  margin-bottom: 10px;
+}
+
+.checkbox input[type=checkbox] {
+  display: none;
+}
+
+.checkbox label {
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.checkbox label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #007bff; /* граница синего цвета */
+  border-radius: 3px;
+}
+
+.checkbox input[type=checkbox]:checked + label:before {
+  background-color: #007bff; /* синий цвет заливки при выборе */
+}
+
+.checkbox label:after {
+  content: '\2713'; /* Unicode для галочки */
+  position: absolute;
+  left: 4px;
+  top: 3px;
+  font-size: 14px;
+  color: white;
+  display: none;
+}
+
+.checkbox input[type=checkbox]:checked + label:after {
+  display: block; /* показываем галочку при выборе */
+}
