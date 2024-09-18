@@ -1,3 +1,13 @@
+// html {
+//   scroll-behavior: smooth;
+//   scroll-padding-top: var(--header-height);
+// }
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
 .wrapper {
   display: flex;
   justify-content: center;
@@ -5,29 +15,55 @@
   flex-direction: column;
   min-height: 100vh;
   gap: 20px;
-  font-size: 32px;
-  font-family: "Lexend", sans-serif;
+
 }
 
-#display {
-  background: #000;
-  width: 178px;
-  height: 100px;
-  color: white;
+#displayTimer {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 56px;
+  font-size: 32px;
   font-weight: 700;
+  background: #000;
+  width: 200px;
+  height: 70px;
+  color: white;
   border-radius: 10px;
 }
-#numberA, #numberB {
-  width: 250px;
-  height: 40px;
-  border-radius: 10px;
-  border: 1px solid black;
-  padding-left: 25px;
+#display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 32px;
-  font-family: "Lexend", sans-serif;
   font-weight: 700;
+  background: #000;
+  width: 200px;
+  height: 70px;
+  color: white;
+  border-radius: 10px;
+}
+#btn {
+  padding: 15px 25px;
+  outline: none;
+  cursor: pointer;
+  font-size: 24px;
+  background: red;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 9px #333;
+  font-family: "Lexend", sans-serif;
+}
+#btn:hover {
+  background: #bb0000;
+}
+
+#btn:active {
+  box-shadow: 0 5px #777;
+  transform: translateY(4px);
+}
+
+.red {
+  background-color: red;
+  color: white;
 }

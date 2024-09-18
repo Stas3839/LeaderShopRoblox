@@ -1661,6 +1661,106 @@ document.addEventListener("DOMContentLoaded", checkBasketState);
 //   console.log(` Привет ${elem}!`)
 // });
 
+const display = document.getElementById("display");
+const displayTimer = document.getElementById("displayTimer");
+const inputTimer = document.getElementById("inputTimer");
+const btn = document.getElementById("btn");
+const start = document.getElementById("btn2");
+
+let count = 0;
+let time;
+let startTime;
+start.addEventListener("click", () => {
+  if (!startTime) {
+    time = parseInt(inputTimer.value, 10);
+    if (isNaN(time) || time <= 0) {
+      alert("Нормально введи🤦‍♂️");
+      return;
+    }
+  }
+  displayTimer.textContent = time
+  startTime = setInterval(() => {
+    if (time > 0) {
+      displayTimer.textContent = --time;
+      if (time === 10) {
+        displayTimer.style.color = "red";
+      }
+    } else {
+      clearInterval(startTime);
+      btn.disabled = true;
+    }
+  }, 1000);
+});
+btn.addEventListener("click", () => {
+  if (time > 0) {
+    display.textContent = ++count;
+  }
+});
+
+
+
+function getRandomRole() {
+  const randomRole = Math.random() * 100
+  let chanceRole = 0
+  for(let i = 0; i < roles.length; i++) {
+    chanceRole += roles[i].chance
+    if(randomRole < chanceRole) {
+      return roles[i]
+    }
+  }
+}
+
+
+
+
+
+const btn = document.getElementById("btn");
+const roleText = document.getElementById("role");
+
+const roles = [
+  { name: "Innocent", color: "green", chance: 60 },
+  { name: "Sheriff", color: "blue", chance: 30 },
+  { name: "Murder", color: "red", chance: 10 },
+];
+
+btn.addEventListener("click", () => {
+  let duration = 1500;
+  let interval = 70;
+  let times = duration / interval;
+  let count = 0;
+  let selectedRole;
+
+  const getRandomRole = setInterval(() => {
+    const randomRole = roles[Math.floor(Math.random() * roles.length)];
+    roleText.textContent = `${randomRole.name}`;
+    roleText.style.color = randomRole.color;
+    count++;
+    if (count >= times) {
+      clearInterval(getRandomRole);
+      selectedRole = roles[Math.floor(Math.random() * roles.length)];
+      roleText.textContent = `${selectedRole.name}`;
+      roleText.style.color = selectedRole.color;
+    }
+  }, interval);
+});
+
+
+кнопка скролла на верх 
+
+const btn = document.getElementById("btn");
+
+function scrollHeader() {
+  document.getElementById("header").scrollIntoView({ behavior: "smooth" });
+}
+btn.addEventListener("click", scrollHeader);
+
+window.addEventListener("scroll", () => {
+  const headerScroll = document.getElementById("header").offsetHeight;
+  if (window.scrollY > headerScroll) {
+    btn.classList.add("show");
+  } else {
+    btn.classList.remove("show");
+  }
+});
 
 */
-

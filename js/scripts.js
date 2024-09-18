@@ -673,16 +673,15 @@ btn.addEventListener("click", () => {
   const operation = selectCalculate.value;
   const result = OPERATIONS[operation] ? OPERATIONS[operation](a, b) : 'Invalid Operation';
   display.textContent = result;
-});
-*/
 
-const display = document.getElementById("display");
-const inputA = document.getElementById("numberA");
-const inputB = document.getElementById("numberB");
-const btn = document.getElementById("btnResult");
+
+  const display = document.getElementById("display");
+const inputA = document.getElementById("inputA");
+const inputB = document.getElementById("inputB");
 const selectCalculate = document.getElementById("selectCalculate");
+const btn = document.getElementById("btn");
 
-const OPERATIONS = {
+const operations = {
   "+": (a, b) => a + b,
   "-": (a, b) => a - b,
   "*": (a, b) => a * b,
@@ -693,8 +692,111 @@ btn.addEventListener("click", () => {
   const a = Number(inputA.value);
   const b = Number(inputB.value);
   const operation = selectCalculate.value;
-  const result = OPERATIONS[operation]
-    ? OPERATIONS[operation](a, b)
-    : "Invalid Operation";
+  const result = operations[operation]
+    ? operations[operation](a, b)
+    : "Invalid operation";
   display.textContent = result;
+  if (typeof result === "number") {
+    display.textContent = result.toLocaleString("en-US");
+  } else {
+    display.textContent = result;
+  }
+});
+
+});
+
+
+
+const display = document.getElementById("display");
+const displayTimer = document.getElementById("displayTimer");
+const btn = document.getElementById("btn");
+
+let counter = 0;
+let timer = 100;
+let timeOut;
+
+function startTimer() {
+  timeOut = setInterval(() => {
+    displayTimer.textContent = --timer;
+    if (timer === 0) {
+      clearInterval(timeOut);
+      btn.disabled = true;
+    }
+  }, 1000);
+}
+
+btn.addEventListener("click", () => {
+  display.textContent = ++counter;
+  if (counter >= 4000) {
+    display.style.color = "red";
+    alert("Вы выиграли");
+    clearInterval(timeOut);
+    btn.disabled = true;
+  }
+});
+
+
+startTimer()
+
+
+
+const textArea = document.getElementById("textArea")
+const deleteBtn = document.getElementById("delete")
+const saveBtn = document.getElementById("btn") 
+
+window.addEventListener("load", () => {
+  const savedText = localStorage.getItem("textAreaContent")
+  if(savedText) {
+    textArea.value = savedText
+  }
+})
+saveBtn.addEventListener("click", () => {
+  localStorage.setItem("textAreaContent", textArea.value)
+})
+deleteBtn.addEventListener("click", () => {
+  localStorage.removeItem("textAreaContent")
+  textArea.value = ""
+})
+
+const textArea = document.getElementById("textArea");
+const btnDelete = document.getElementById("delete");
+const btnSave = document.getElementById("btn");
+
+window.addEventListener("load", () => {
+  const savedText = localStorage.getItem("textAreaContent");
+  if (savedText) {
+    textArea.value = savedText;
+  }
+});
+btnSave.addEventListener("click", () => {
+  localStorage.setItem("textAreaContent", textArea.value);
+});
+btnDelete.addEventListener("click", () => {
+  localStorage.removeItem("textAreaContent");
+  textArea.value = "";
+});
+
+*/
+const A = document.getElementById("inputA");
+const B = document.getElementById("inputB");
+const btn = document.getElementById("btn");
+const display = document.getElementById("display");
+const selectCalculate = document.getElementById("selectCalculate");
+
+const operations = {
+  "+": (a, b) => a + b,
+  "-": (a, b) => a - b,
+  "*": (a, b) => a * b,
+  "/": (a, b) => (b !== 0 ? a / b : "Error"),
+};
+btn.addEventListener("click", () => {
+  const a = Number(A.value);
+  const b = Number(B.value);
+  const operation = selectCalculate.value;
+  const result = operations[operation] ? operations[operation](a, b) : "Error";
+  if (typeof result === "number") {
+    display.textContent = result.toLocaleString("en-US");
+  } else {
+    display.textContent = result;
+  }
 });
