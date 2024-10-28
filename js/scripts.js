@@ -777,26 +777,26 @@ btnDelete.addEventListener("click", () => {
 });
 
 */
-const A = document.getElementById("inputA");
-const B = document.getElementById("inputB");
 const btn = document.getElementById("btn");
 const display = document.getElementById("display");
-const selectCalculate = document.getElementById("selectCalculate");
+const displayTime = document.getElementById("displayTime");
 
-const operations = {
-  "+": (a, b) => a + b,
-  "-": (a, b) => a - b,
-  "*": (a, b) => a * b,
-  "/": (a, b) => (b !== 0 ? a / b : "Error"),
-};
-btn.addEventListener("click", () => {
-  const a = Number(A.value);
-  const b = Number(B.value);
-  const operation = selectCalculate.value;
-  const result = operations[operation] ? operations[operation](a, b) : "Error";
-  if (typeof result === "number") {
-    display.textContent = result.toLocaleString("en-US");
-  } else {
-    display.textContent = result;
-  }
-});
+let time = 15;
+let count = 0;
+
+function getCountTime() {
+  const startTime = setInterval(() => {
+    displayTime.textContent = --time;
+    if (time === 10) {
+      displayTime.style.color = "red";
+    }
+    if (time === 0) {
+      clearInterval(startTime);
+      btn.disabled = true;
+    }
+  }, 1000);
+  btn.addEventListener("click", () => {
+    display.textContent = ++count;
+  });
+}
+getCountTime()
